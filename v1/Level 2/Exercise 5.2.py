@@ -17,3 +17,4 @@ hasil = " ".join(kata_list)
 
 
 print("END")
+print("END")

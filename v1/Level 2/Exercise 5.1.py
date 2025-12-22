@@ -10,4 +10,4 @@ for angka in angka_list:
     if angka % 2 == 0:
         angka_list_baru.append(angka)
 
-print("END")
+print("END22")

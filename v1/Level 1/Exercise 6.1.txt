@@ -1,0 +1,47 @@
+"""
+6.	Project 1 – Kalkulator rata rata nilai
+•	 Program minta jumlah mata kuliah.
+•	 Loop minta nilai tiap mata kuliah.
+•	 Hitung dan tampilkan rata rata + kategori (Bagus/Cukup/Kurang).
+"""
+
+def hitung_rata(list_angka):
+    panjang_list = len(list_angka)
+    nilai_kumulatif = 0
+
+    for i in list_angka:
+        nilai_kumulatif = nilai_kumulatif + i
+    
+    nilai_rata = nilai_kumulatif/panjang_list
+
+    return nilai_rata
+
+kategori = ["Bagus","Cukup","Kurang","Gagal"]
+minimum_kategori = [80,68,56,0]
+list_nilai=[]
+
+print("Mohon input jumlah mata kuliah jurusan anda: ")
+jumlah_mata_kuliah = int(input())
+print()
+
+for i in range(jumlah_mata_kuliah):
+    angka_label = i+1
+    print("Mohon input yang benar nilai mata kuliah ke-",angka_label," anda")
+    input_user = float(input())
+    list_nilai.append(input_user)
+
+rata_nilai = hitung_rata(list_nilai)
+
+print("\nNilai rata kuliah anda adalah: ")
+print(rata_nilai)
+
+indeks_kategori = 0
+
+for i, min in enumerate(minimum_kategori):
+    if rata_nilai >= min:
+        indeks_kategori = i
+        break
+
+grade = kategori[indeks_kategori]
+
+print("Grade Anda : ",grade)

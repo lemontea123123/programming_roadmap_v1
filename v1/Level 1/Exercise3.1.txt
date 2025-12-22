@@ -1,0 +1,3 @@
+#Program yang print angka 1 sampai 20 dengan for.
+for i in range(1,21):
+    print(i)

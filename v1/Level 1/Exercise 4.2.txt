@@ -1,0 +1,19 @@
+#List angka: simpan beberapa angka dan hitung rata ratanya
+jumlah_angka = 10
+list_angka = []
+
+for i in range(10):
+    print("Mohon input angka: ")
+    user_input = int(input())
+    list_angka.append(user_input)
+
+total_sum = 0
+for i in list_angka:
+    total_sum = total_sum + i
+
+average = total_sum / jumlah_angka
+
+print("Jumlah rata total: ")
+print(average)
+
+

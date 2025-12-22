@@ -1,0 +1,47 @@
+"""
+1.	List, dict, set dasar
+o	Buat list angka, lalu: cari nilai maksimum, minimum, dan rata rata (tanpa pakai max() / min() dulu, coba manual). 
+).
+
+"""
+
+list_angka = list(range(1,1250))
+
+def max(list):
+    max_value = None
+
+    for angka in list_angka:
+        if(max_value == None):
+            max_value = angka
+            continue
+        
+        if(angka > max_value):
+            max_value = angka
+    return max_value
+
+def min(list):
+    min_value = None
+
+    for angka in list_angka:
+        if(min_value == None):
+            min_value = angka
+            continue
+        
+        if(angka < min_value):
+            min_value = angka
+    return min_value
+
+def rata(list):
+    panjang_list = len(list)
+    total = 0
+    for angka in list_angka:
+        total = total + angka
+    
+    return total/panjang_list
+    
+
+
+max(list_angka)
+min(list_angka)
+rata(list_angka)
+print("test")

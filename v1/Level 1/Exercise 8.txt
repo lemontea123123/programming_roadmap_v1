@@ -1,0 +1,62 @@
+"""
+Docstring for Exercise 8
+8.	Project 3 – To do list terminal
+•	 Punya list tugas = [].
+•	 Menu: lihat tugas / tambah tugas / hapus tugas / keluar (loop while True).
+•	 Bisa tambah tugas baru ke list.
+•	 Bisa hapus tugas berdasarkan nomor.
+
+"""
+
+def user_loading():
+
+    print("\nTekan apapun untuk balik ke menu...")
+    input()
+
+opsi_menu = ["1","2","3","4"]
+list_tugas = ["Tugas Rumah","Proyek kelompok","Karang Essay"]
+loop = True
+
+pilihan_menu = 0
+
+while loop:
+    #Display menu
+    print("\nPilihan Menu: ")
+    print("1. Lihat Tugas")
+    print("2. Tambah Tugas")
+    print("3. Hapus Tugas")
+    print("4. Keluar Program")
+
+    print("\nPilih menu :")
+    pilihan_menu = input()
+
+    flag = pilihan_menu in opsi_menu 
+
+    if flag == False :
+        print("Tolong input yang benar!")
+        user_loading()
+        continue
+
+    print("")
+
+    if pilihan_menu == "1":
+        #Lihat konten tugas
+        print("List Tugas:")
+        for i,tugas in enumerate(list_tugas):
+            print(i+1,". ",tugas)
+        user_loading()
+    elif pilihan_menu == "2":
+        #Tambah tugas
+        print("Ketik Tugas yang akan ditambah: ")
+        user_input = input()
+        list_tugas.append(user_input)
+        user_loading()
+    elif pilihan_menu == "3" :
+        #Hapus Tugas 
+        print("Input Nomor Tugas yang akan dihapus: ")
+        user_input = int(input())
+        list_tugas.pop(user_input-1)
+    elif pilihan_menu == "4" :
+        print("Exiting Program")
+        loop = False
+    

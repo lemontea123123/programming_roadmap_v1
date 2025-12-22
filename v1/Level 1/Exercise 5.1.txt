@@ -1,0 +1,17 @@
+#Fungsi hitung_rata(lista_angka) yang mengembalikan rata rata
+
+
+def hitung_rata(list_angka):
+    panjang_list = len(list_angka)
+    nilai_kumulatif = 0
+
+    for i in list_angka:
+        nilai_kumulatif = nilai_kumulatif + i
+    
+    nilai_rata = nilai_kumulatif/panjang_list
+
+    return nilai_rata
+
+rata = hitung_rata(range(1,3))
+print(rata)
+

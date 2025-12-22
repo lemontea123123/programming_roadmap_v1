@@ -1,0 +1,17 @@
+#Program kategori umur: anak / remaja / dewasa berdasarkan angka umur.
+# anak 1-10 , remaja 10-20 , dewasa 20-100
+
+print("Input Umur Anda:")
+input1 = int(input())
+
+if input1 < 1 or input1 > 120 :
+    print("Mohon Input yang benar!")
+
+if input1 > 1 and input1 <= 10:
+    print("Anda adalah seorang anak")
+
+if input1 > 11 and input1 <= 20:
+    print("Anda adalah seorang remaja")
+
+if input1 > 21 and input1 <= 100:
+    print("Anda adalah seorang dewasa")

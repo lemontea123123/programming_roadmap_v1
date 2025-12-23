@@ -14,8 +14,8 @@ o
 •	Pastikan ada pesan kalau antrian kosong saat ingin melayani.
 """
 
-from Tools.menu_controller import main  as menu_controller_main 
-from Tools.menu_controller import user_loading 
+from v2Tools.menu_controller import main  as menu_controller_main 
+from v2Tools.menu_controller import user_loading 
 
 """
 Pilihan Menu

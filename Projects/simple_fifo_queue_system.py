@@ -64,7 +64,7 @@ list_antrian = [
     {"nomor": 2, "nama": "Budi"},
     {"nomor": 3, "nama": "Cici"},
     {"nomor": 4, "nama": "Dina"},
-    {"nomor": 15, "nama": "Eko"}
+    {"nomor": 5, "nama": "Eko"}
 ]
 
 

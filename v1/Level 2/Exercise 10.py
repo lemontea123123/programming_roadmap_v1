@@ -23,7 +23,9 @@ pilihan_menu = [
     "Keluar"
 ]
 
-menu_controller_main(pilihan_menu)
+pilihan_user = menu_controller_main(pilihan_menu)
+
+print("test")
 
 
 

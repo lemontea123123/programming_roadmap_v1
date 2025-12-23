@@ -73,3 +73,6 @@ def main(pilihan_menu):
     return user_input
 
 
+if __name__ == "__main__":
+    main(["Set","Pilihan","Nomor"])
+

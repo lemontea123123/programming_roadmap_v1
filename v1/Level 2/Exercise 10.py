@@ -13,6 +13,9 @@ o
 •	Data antrian disimpan di list (atau collections.deque kalau sudah kenal).
 •	Pastikan ada pesan kalau antrian kosong saat ingin melayani.
 """
+
+from Tools.menu_controller import main as menu_controller_main
+
 pilihan_menu = [
     "Tambah orang ke antrian",
     "Layani orang berikutnya (mengeluarkan dari antrian)",
@@ -20,32 +23,7 @@ pilihan_menu = [
     "Keluar"
 ]
 
-def input_nomor(dialog="Input Nomor Yang Benar:",choices = []):
-    print(dialog)
-    loop = True
-    user_input = None
-    while loop:   
-        try:
-            user_input = float(input())
-
-            flag0 = len(choices) > 0
-            flag1 = user_input in choices
-            flag2 = flag0 and flag1
-
-            #if not in choices but choices length is 0
-            flag3 = not(flag0) 
-
-            if flag2 or flag3:
-                loop = False
-                continue
-            
-            print("Mohon Input Pilihan No. Yang Benar")
-
-        except ValueError:
-            print("Mohon Input Format Nomor Yang Benar")
-
-    return user_input
-     
+menu_controller_main(pilihan_menu)
 
 
-user_input = input_nomor(dialog="Pilih No. Menu:", choices = [1,2,3,4] )
+

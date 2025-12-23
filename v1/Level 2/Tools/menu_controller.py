@@ -23,13 +23,17 @@ o
 •	Pastikan ada pesan kalau antrian kosong saat ingin melayani.
 """
 
+def user_loading(dialog="Press Anything To Continue..."):
+    print(dialog)
+    input()
+
 def input_nomor(dialog="Input Nomor Yang Benar:",choices = []):
     print(dialog)
     loop = True
     user_input = None
     while loop:   
         try:
-            user_input = float(input())
+            user_input = int(input())
 
             flag0 = len(choices) > 0
             flag1 = user_input in choices
@@ -49,7 +53,7 @@ def input_nomor(dialog="Input Nomor Yang Benar:",choices = []):
 
     return user_input
 
-def main(pilihan_menu):
+def main(dialog="\nMain Menu: ",pilihan_menu=["TEST,TEST"]):
     """
     pilihan_menu = [
         "Tambah orang ke antrian",
@@ -64,7 +68,8 @@ def main(pilihan_menu):
         return -1
 
     pilihan_nomor = list(range(1,len(pilihan_menu)+1))
-                            
+
+    print(dialog)         
     for i , pesan in enumerate(pilihan_menu):
         print(i+1,". ",pesan)
 
@@ -72,7 +77,4 @@ def main(pilihan_menu):
 
     return user_input
 
-
-if __name__ == "__main__":
-    main(["Set","Pilihan","Nomor"])
 

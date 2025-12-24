@@ -12,12 +12,20 @@ import pandas as pd
 
 df = pd.read_csv("v1\Level 3\data_penjualan1.csv")
 
-#Finds which rows excluding id and tanggal columns , which cells doesnt contain NaN
-data_frame_nan_mask = df[["jumlah","harga"]].isna()
-#Reduce to a series mask , which row contain NaN is identified , True is inverted to False
-single_series_mask = data_frame_nan_mask.any(axis=1) == False
+#Finds which rows excluding id and tanggal columns , which cells DOES NOT NaN
+mask1 = df[["jumlah"]].notna().any(axis=1)
 
-new_data_frame = df[single_series_mask]
+
+#which rows from both column nama_barang dan harga DOES NOT NaN bersamaan!!!
+mask2 = df[["nama_barang","harga"]].notna().any(axis=1)
+
+mask_final = (mask1 & mask2)
+
+print(type(mask1))
+print(type(mask2))
+
+new_data_frame = df[mask_final]
+
 
 #Only Tanggal dan Nama_barang columns allowed to have NaN values
 # in these columns NaN will be filled with 0

@@ -1,0 +1,19 @@
+Gunakan SQLite atau playground online.
+1.	Setup tabel sederhana
+•	Buat tabel penjualan dengan kolom: id, tanggal, produk, jumlah, harga.wikipedia
+•	Insert minimal 10–20 baris data contoh.wikipedia
+
+
+CREATE TABLE penjualan(
+    id INTEGER AUTOINCREMENT PRIMARY KEY,
+    tanggal DATETIME,
+    produk TEXT,
+    jumlah INTEGER,
+    harga INTEGER
+);
+
+INSERT INTO penjualan(tanggal , produk , jumlah , harga)
+    VALUES
+        ('2025-12-24','Odol',5,5000),
+        ('2025-12-24','Odol',10,5000);
+        

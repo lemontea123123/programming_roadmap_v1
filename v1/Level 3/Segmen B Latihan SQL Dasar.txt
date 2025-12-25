@@ -1,0 +1,44 @@
+Gunakan SQLite atau playground online.
+1.	Setup tabel sederhana
+•	Buat tabel penjualan dengan kolom: id, tanggal, produk, jumlah, harga.wikipedia
+•	Insert minimal 10–20 baris data contoh.wikipedia
+
+B.1.
+
+CREATE TABLE penjualan(
+    id INTEGER AUTOINCREMENT PRIMARY KEY,
+    tanggal DATETIME,
+    produk TEXT,
+    jumlah INTEGER,
+    harga INTEGER
+);
+
+INSERT INTO penjualan(tanggal , produk , jumlah , harga)
+    VALUES
+        ('2025-01-01', 'Teh Botol',      10, 5000),
+        ('2025-01-01', 'Kopi Hitam',      8, 8000),
+        ('2025-01-01', 'Roti Coklat',     6, 6000),
+        ('2025-01-02', 'Mie Instan',     15, 3500),
+        ('2025-01-02', 'Susu UHT',        5, 12000),
+        ('2025-01-02', 'Air Mineral',    20, 3000),
+        ('2025-01-03', 'Snack Kentang',   7, 9000),
+        ('2025-01-03', 'Coklat Batang',   9, 7000),
+        ('2025-01-03', 'Sabun Mandi',     4, 8000),
+        ('2025-01-04', 'Odol',            5, 6000),
+        ('2025-01-04', 'Teh Botol',      12, 5000),
+        ('2025-01-04', 'Kopi Hitam',      9, 8000),
+        ('2025-01-05', 'Roti Coklat',     7, 6000),
+        ('2025-01-05', 'Mie Instan',     18, 3500),
+        ('2025-01-05', 'Susu UHT',        6, 12000),
+        ('2025-01-06', 'Air Mineral',    22, 3000),
+        ('2025-01-06', 'Snack Kentang',   8, 9000),
+        ('2025-01-06', 'Coklat Batang',  10, 7000),
+        ('2025-01-07', 'Sabun Mandi',     5, 8000),
+        ('2025-01-07', 'Odol',            6, 6000);
+
+B.2.
+2.	SELECT & WHERE
+•	Query untuk menampilkan semua baris.wikipedia
+•	Query untuk menampilkan hanya penjualan untuk satu produk tertentu dan hanya tanggal setelah tanggal tertentu.wikipedia
+
+

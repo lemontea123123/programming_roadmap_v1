@@ -41,4 +41,31 @@ B.2.
 •	Query untuk menampilkan semua baris.wikipedia
 •	Query untuk menampilkan hanya penjualan untuk satu produk tertentu dan hanya tanggal setelah tanggal tertentu.wikipedia
 
+SELECT * FROM penjualan;
+SELECT * FROM penjualan WHERE produk='Roti Coklat' AND tanggal > '2025-01-01' ;
 
+
+B.3.
+3.	ORDER BY & LIMIT
+•	Query untuk menampilkan 5 penjualan dengan total tertinggi (boleh pakai jumlah * harga langsung di query).wikipedia
+•	Query untuk menampilkan penjualan diurutkan berdasarkan tanggal terbaru dulu.wikipedia
+
+SELECT * , jumlah*harga AS total_penjualan FROM penjualan ORDER BY total_penjualan DESC LIMIT 5 ;
+SELECT * FROM penjualan ORDER BY tanggal DESC;
+
+B.4.
+4.	Fungsi agregasi
+•	Hitung total semua penjualan.wikipedia
+•	Hitung rata-rata, maksimum, dan minimum jumlah.wikipedia
+
+SELECT SUM(harga*jumlah) FROM penjualan;
+SELECT AVG(jumlah) FROM penjualan;
+SELECT MAX(jumlah) FROM penjualan;
+SELECT MIN(jumlah) FROM penjualan;
+
+B.5.
+5.	GROUP BY
+•	Hitung total penjualan per produk (satu baris per produk).wikipedia
+•	Hitung total penjualan per hari atau per bulan (misal pakai fungsi tanggal kalau tersedia).wikipedia
+
+SELECT produk , SUM(jumlah*harga) AS total_penjualan FROM penjualan GROUP BY produk;

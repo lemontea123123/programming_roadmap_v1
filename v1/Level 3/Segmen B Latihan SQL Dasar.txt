@@ -6,7 +6,7 @@ Gunakan SQLite atau playground online.
 B.1.
 
 CREATE TABLE penjualan(
-    id INTEGER AUTO INCREMENT PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     tanggal DATETIME,
     produk_id INTEGER,
     jumlah INTEGER

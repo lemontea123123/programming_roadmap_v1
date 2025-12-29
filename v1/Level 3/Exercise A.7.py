@@ -20,6 +20,7 @@ group_bulan = df.groupby("bulan")
 df2 = group_bulan["total_penjualan"].sum().reset_index()
 df2["total_penjualan"] = df2["total_penjualan"]/1000000
 
+
 group_produk = df.groupby("produk")
 #Data Frame of grouped data based on Product sales
 df3 = group_produk["total_penjualan"].sum().reset_index()
@@ -39,7 +40,6 @@ plt.ylabel("Total Penjualan di Jutaan")
 plt.tight_layout()
 plt.show()
 
-print(df3)
 plt.figure(figsize=(8, 4))
 plt.bar(df3["produk"],df3["total_penjualan"])
 

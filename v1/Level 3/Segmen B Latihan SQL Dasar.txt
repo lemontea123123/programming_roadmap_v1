@@ -132,3 +132,8 @@ SELECT penjualan.tanggal , stok.produk , penjualan.jumlah , stok.harga , (penjua
 SELECT stok.kategori , SUM(penjualan.jumlah * stok.harga) AS total_penjualan
     FROM penjualan INNER JOIN stok ON penjualan.produk_id = stok.id
         GROUP BY stok.kategori;
+
+
+
+
+

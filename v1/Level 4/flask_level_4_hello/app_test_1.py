@@ -1,0 +1,36 @@
+"""
+Docstring for app_test_1
+    Ini saya lakukan di Folder flask_level_4_hello di file test.py
+
+5.	Template HTML dengan Flask
+o	Pindahkan HTML dari form.html ke folder templates/index.html.geeksforgeeks
+o	Modifikasi route / supaya render_template('index.html').
+6.	Route GET & POST
+o	Buat route /submit yang menerima POST dari form.flask.palletsprojects
+o	Ambil data dari request.form['judul'] dan request.form['isi'], lalu print di terminal dan tampilkan kembali di halaman (misal pakai template result.html).
+
+"""
+
+from flask import Flask , render_template , request
+from werkzeug.exceptions import BadRequestKeyError
+
+app = Flask(__name__)
+
+@app.route("/")
+def show_form_index_html():
+    return render_template("index.html")
+
+@app.route("/submit",methods=["GET","POST"])
+def show_result_result_html():
+    try :
+        title = request.form["title"]
+        content = request.form["content"]
+    except BadRequestKeyError:
+        return render_template("index.html",error="Please Fill In Information")
+
+    return render_template("result.html",title=title,content=content)
+
+
+if(__name__ == "__main__"):
+    app.run(debug=True)
+

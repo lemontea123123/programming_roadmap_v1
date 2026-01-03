@@ -13,3 +13,5 @@ o	Buat route /submit yang menerima POST dari form.flask.palletsprojects
 o	Ambil data dari request.form['judul'] dan request.form['isi'], lalu print di terminal dan tampilkan kembali di halaman (misal pakai template result.html).
 
 Ini saya lakukan di folder flask_level_4_hello di file app_test_1.py
+
+

@@ -1,0 +1,18 @@
+C. Baca & kirim JSON dengan Flask (wajib)
+7.	Endpoint yang mengembalikan JSON
+o	Buat route /api/notes (method GET) yang return list notes statis dalam bentuk JSON (pakai jsonify).notes.kodekloud+1
+o	Contoh: list berisi 2–3 dict dengan id, title, content.
+
+ini saya lanjut kerjakan di app_test_1.py
+
+8.	Endpoint POST JSON sederhana
+o	Buat route /api/add_note (method POST) yang baca JSON dari request.get_json().notes.kodekloud
+o	Untuk sekarang: hanya print data di terminal dan kirim balik response JSON {"status": "ok"}.
+
+Ini sy lanjut kerjakan di app_test_1.py
+
+9.	Test pakai Postman / curl
+o	Coba kirim request GET /api/notes dan lihat JSON yang dikembalikan.notes.kodekloud
+o	Coba kirim POST /api/add_note dengan body JSON dan pastikan responsenya sesuai.
+
+Ini sudh saya test di post man okkay

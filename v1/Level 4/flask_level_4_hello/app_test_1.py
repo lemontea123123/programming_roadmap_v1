@@ -13,6 +13,25 @@ o	Ambil data dari request.form['judul'] dan request.form['isi'], lalu print di t
 
 from flask import Flask , render_template , request
 from werkzeug.exceptions import BadRequestKeyError
+from flask import jsonify
+
+list_movie = [
+    {
+        "id":1,
+        "title":"Batman",
+        "content":"Film Batman"
+    },
+    {
+        "id":2,
+        "title":"Fatman",
+        "content":"Film tentang Fatman"
+    },
+    {
+        "id":3,
+        "title":"Catman",
+        "content":"Film tentang Catman"
+    }
+]
 
 app = Flask(__name__)
 
@@ -29,6 +48,19 @@ def show_result_result_html():
         return render_template("index.html",error="Please Fill In Information")
 
     return render_template("result.html",title=title,content=content)
+
+@app.route("/api/notes",methods=["GET"])
+def return_notes_list():
+    return jsonify(list_movie)
+
+@app.route("/api/add_note",methods=["POST"])
+def add_note():
+    note_obj = request.get_json()
+
+    print("Received JSON:\n",note_obj)
+    return {
+        "status":"ok"
+    }
 
 
 if(__name__ == "__main__"):

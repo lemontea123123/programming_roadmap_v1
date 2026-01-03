@@ -42,14 +42,19 @@ def call_gemini(prompt):
         ]
     }
 
+
     respond = requests.post(url,headers=headers,json=content)
-    response_text = respond.json()["candidates"][0]["content"]["parts"][0]["text"]
+
+    if(respond.status_code == 429):
+        response_text = "Jatah Kueri A.I. sudah habis!"
+    else:
+        response_text = respond.json()["candidates"][0]["content"]["parts"][0]["text"]
 
     return response_text
 
 
 
-def call_ai(prompt):
+def call_perp(prompt):
 
     header = {
         "Authorization":f"Bearer {perplexity_key}",
@@ -68,12 +73,9 @@ def call_ai(prompt):
 
     respond = requests.post(url,headers=header,json=body)
 
-    print(respond.status_code)
-    print(respond.reason)
 
     response_text = respond.json()["choices"][0]["message"]["content"]
 
-    print(response_text)
     #Extract Text
     return response_text
 

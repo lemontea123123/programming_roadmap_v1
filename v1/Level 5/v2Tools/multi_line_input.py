@@ -14,6 +14,7 @@ def multi_line_input(dialog="Input Teks Panjang , Enter dua kali untuk akhiri",b
     print(dialog," Enter dua kali untuk akhiri")
     while loop:
         line = input()
+
         user_input.append(line)
         if(line==""):
             loop=False

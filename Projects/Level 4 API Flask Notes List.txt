@@ -1,0 +1,17 @@
+Deskripsi singkat projek
+Ini adalah Notes/Movie App sederhana berbasis Flask yang menyimpan data di memori menggunakan list Python, tanpa database.
+​
+
+Aplikasi menampilkan daftar catatan/film pada halaman utama, lengkap dengan judul dan isi.
+​
+
+Pengguna bisa menambah catatan baru lewat form HTML; data dikirim ke server, diberi id baru secara otomatis, lalu ditampilkan kembali di halaman utama.
+​
+
+Setiap catatan memiliki tombol hapus yang memanggil route /delete/<id> untuk menghapus item dari list dan me‑render ulang halaman.
+​
+
+Aplikasi juga menyediakan API JSON: GET /api/notes mengembalikan seluruh catatan, POST /api/add_note menambah catatan dari body JSON, dan DELETE /api/notes/<id> menghapus catatan berdasarkan id.
+​
+
+Projek ini melatih konsep dasar Flask: routing, handling form (GET/POST), template Jinja2, manipulasi struktur data list/dict di Python, dan pembuatan endpoint REST API sederhana

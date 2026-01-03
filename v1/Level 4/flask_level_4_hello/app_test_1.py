@@ -82,7 +82,7 @@ def add_refresh_index_html():
     
     add_movie(title,content)
 
-    return render_template("index.html",list_movie=list_movie)
+    return redirect(url_for("show_form_index_html"))
 
 @app.route("/submit",methods=["GET","POST"])
 def show_result_result_html():

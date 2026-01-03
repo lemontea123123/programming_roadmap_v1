@@ -1,0 +1,36 @@
+. Latihan konsep API & HTTP (wajib)
+1.	Apa itu API & HTTP (tanpa coding dulu)
+•	Baca dan catat singkat: apa itu HTTP request, method GET/POST, status code 200/400/500, dan JSON.realpython+1
+•	Tulis dengan bahasamu sendiri: “API itu apa?” dan “Bedanya GET dan POST apa?”.
+2.	Latihan requests dasar (Python)
+•	Install dan test: pip install requests, lalu script sederhana GET ke https://httpbin.org/get dan print status_code + response.json().geeksforgeeks+1
+•	Buat 2 script kecil:
+o	Script 1: GET ke https://httpbin.org/get?nama=... dan print nilai parameter nama dari JSON.
+o	Script 2: POST ke https://httpbin.org/post dengan JSON { "pesan": "halo" } dan print kembali datanya dari respons.
+3.	API key & environment variable (konsep)
+•	Pelajari konsep: apa itu API key, kenapa tidak boleh ditulis langsung di code yang dishare.apxml+1
+•	Latihan: set 1 environment variable dummy, misal MY_API_KEY=abc123, lalu di Python baca dengan os.getenv("MY_API_KEY") dan print.
+
+
+1. HTTP adalah cara komunikasi antara client dan server , request adalah percakapan atau pergantian data , 
+permintaan data dari client ke server
+metode 
+Get adalah rekues dari client permintaan data ke server , untuk menampilkan suatu data ,
+kueri get bisa langsung keliatan di link url , gampang di akses karena kueri dgn url bersamaan bisa di copy dan share ke user lain
+motode 
+POST adalah rekues dari client untuk permintaan atau perubahan data ke server, kueri ny di dalam body rekues jadi nggk aksesibel
+seperti GET dan nggk bisa di share dgn user lain 
+status code 200 adalah respon OK diterima dgn baik , 
+400 adalah respon bad request , mungkin dari sisi klien ada kesalahan saat penulisan
+kuery buat request contoh ny format json yang salah
+500 adalah respon internal server error , dimana ada kesalahan dari pihak server , tidak bisa proses data saat itu 
+
+JSON adalah format data yang mengandung pair kunci:nilai , sangat mirip format objek dictionary Python
+
+API adalah applicatoin programming interface , jadi kalau dari sisi aplikasi segi API nya adalah bagian yg dipersiapkan untuk
+memberi akses terbatas seperti "pintu" atau "jendela" , tanpa harus memberi aplikasi lain akses full ke kode kode internal rahasia
+API biasanya didefinisikan sebagai sekumpulan aturan/protokol (URL,format request/response , jenis data , autentikasi dll)
+yang menjelaskan
+apa yang boleh Diminta 
+bagaimana cara minta
+dan seperti apa bentuk jawaban yg akan diberikan 

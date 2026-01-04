@@ -70,6 +70,7 @@ while main_loop:
 
         nomor_exit = len(list_pilihan)
 
+        #Jika User memilih catatan
         if(user_input != nomor_exit):
             #Masuk lagi ke menu mini catatan
             index_catatan = user_input -1 
@@ -83,8 +84,11 @@ while main_loop:
             print("Konten Catatan:")
             print(content)
 
+            #Jika catatan yg dipilih belum ada ringkasan!
             if(ringkasan==""):
                 user_input = display_menu(dialog="Apakah mau coba terapkan ringkasan A.I. di konten catatan?",pilihan_menu=sub_menu_1)
+                
+                #Jika user memilih untuk coba buatin ringkasan
                 if(user_input == 1):
                     #Iya
                     hasil_ringkasan = ringkasan_bahasa_ai(content)
@@ -94,9 +98,12 @@ while main_loop:
 
                     #sekarang tanyain jika mau simpan ringkasan
                     user_input = display_menu(dialog="Apakah mau simpan ringkasan?",pilihan_menu=sub_menu_1)
+                    
+                    #Jika user setuju untuk simpanin ringkasan
                     if(user_input == 1):
                         #Iya
                         catatan["summary"] = hasil_ringkasan
+                        
             else:
                 #Jika sudh ada ringkasan yg tersimpan
                 print("Konten Ringkasan:")

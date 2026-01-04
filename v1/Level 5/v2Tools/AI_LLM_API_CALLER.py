@@ -22,7 +22,7 @@ gemini_key = os.getenv("GEMINI_API_KEY")
 def call_gemini(prompt):
     url = (
         "https://generativelanguage.googleapis.com/v1beta/"
-        "models/gemini-2.5-flash:generateContent"
+        "models/gemini-2.5-flash-lite:generateContent"
         f"?key={gemini_key}"
     )
 
@@ -49,7 +49,7 @@ def call_gemini(prompt):
 
 
 
-def call_ai(prompt):
+def call_perp(prompt):
 
     header = {
         "Authorization":f"Bearer {perplexity_key}",
@@ -68,12 +68,12 @@ def call_ai(prompt):
 
     respond = requests.post(url,headers=header,json=body)
 
-    print(respond.status_code)
-    print(respond.reason)
+    #print(respond.status_code)
+    #print(respond.reason)
 
     response_text = respond.json()["choices"][0]["message"]["content"]
 
-    print(response_text)
+    #print(response_text)
     #Extract Text
     return response_text
 

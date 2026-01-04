@@ -1,0 +1,1 @@
+Pengguna membuat rencana belajar minggu depan dalam file catatan terpisah per topik (seperti file I/O, error handling, API), dan berencana merangkumnya otomatis pakai script yang sedang dikembangkan.[1][2]

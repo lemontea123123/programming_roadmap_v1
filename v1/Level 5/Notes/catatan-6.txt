@@ -1,0 +1,3 @@
+Hari ini saya mencoba menulis fungsi kecil untuk membaca file dan mengembalikan isinya sebagai string.
+Awalnya sempat lupa menutup file, tapi setelah belajar tentang keyword with, kode jadi lebih rapi dan aman.
+Sekarang saya merasa lebih paham kenapa context manager itu penting di Python.

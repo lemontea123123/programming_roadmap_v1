@@ -1,0 +1,3 @@
+Saya menyadari pentingnya memecah masalah besar menjadi langkah-langkah kecil.
+Daripada langsung memikirkan integrasi AI, saya fokus dulu pada baca file, cek error, dan simpan hasil.
+Setelah semua bagian kecil itu jalan, barulah bagian AI terasa lebih mudah disentuh.

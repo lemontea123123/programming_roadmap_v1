@@ -1,0 +1,3 @@
+**Ringkasan:**
+
+Pengguna belajar bahwa `os.listdir()` mengembalikan semua nama entri dalam folder, sehingga perlu memfilter secara manual untuk mendapatkan hanya file `.txt`. Latihan ini membantu meningkatkan pemahaman tentang cara bekerja dengan sistem file.[1][5]

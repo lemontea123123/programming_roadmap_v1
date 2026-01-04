@@ -1,0 +1,1 @@
+Pengguna mulai latihan script Python untuk membaca dan menulis file teks, guna membaca isi file, merangkumnya via AI agar hemat waktu membaca catatan panjang. Latihan ini memahami file I/O (buka, baca, simpan hasil), dan bisa dikembangkan untuk merangkum banyak catatan dalam satu folder.

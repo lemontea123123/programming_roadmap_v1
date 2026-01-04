@@ -1,0 +1,3 @@
+Hari ini saya belajar lebih dalam tentang cara membaca dan menulis file teks dengan Python.
+Ternyata konsepnya sederhana: buka file dengan open(), baca atau tulis isi, lalu tutup kembali.
+Dengan memahami dasar file I/O ini, saya bisa mulai membuat program yang menyimpan catatan dan hasil latihan ke dalam file.

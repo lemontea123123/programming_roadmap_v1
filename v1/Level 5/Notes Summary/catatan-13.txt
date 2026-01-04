@@ -1,0 +1,1 @@
+Kunci suksesnya adalah memecah masalah besar menjadi langkah-langkah kecil.[1] Fokus pada tugas dasar seperti membaca file, memeriksa error, dan menyimpan hasil terlebih dahulu sebelum mengintegrasikan AI, sehingga implementasi AI menjadi lebih mudah ketika fondasi sudah solid.[1]

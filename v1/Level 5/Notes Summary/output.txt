@@ -1,0 +1,1 @@
+Pengguna sedang belajar membuat script Python untuk membaca dan menulis file teks dengan tujuan membuat program yang dapat membaca file, mengirimnya ke layanan AI untuk diringkas, dan menyimpan hasilnya ke file baru[1][2][3]. Latihan ini membantu memahami file I/O dan nantinya dapat dikembangkan untuk merangkum banyak catatan sekaligus dalam satu folder.

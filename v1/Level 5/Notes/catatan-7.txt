@@ -1,0 +1,3 @@
+Saat mengerjakan latihan, saya sadar bahwa memberi nama variabel yang jelas sangat membantu ketika membaca ulang kode.
+Nama seperti content, file_path, dan notes_dir jauh lebih mudah dipahami dibanding a, b, c.
+Ke depan, saya ingin membiasakan diri menulis kode yang tidak hanya jalan, tapi juga enak dibaca.

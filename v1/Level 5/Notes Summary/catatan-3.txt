@@ -1,0 +1,1 @@
+Proyek to-do list terminal hampir selesai dan sudah bermanfaat, memungkinkan tambah, lihat, serta hapus tugas via command line tanpa aplikasi lain. Selanjutnya, rapikan kode dengan memecah menjadi fungsi agar lebih mudah dibaca dan dirawat.

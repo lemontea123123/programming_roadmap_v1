@@ -1,0 +1,3 @@
+Latihan berikutnya adalah membuat script yang bisa merangkum banyak file catatan sekaligus.
+Saya akan membuat folder notes yang berisi beberapa file teks berbeda.
+Lalu, script akan membaca semuanya, mengirim ke API, dan menyimpan hasil ringkasan ke folder lain.

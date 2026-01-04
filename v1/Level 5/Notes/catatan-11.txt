@@ -1,0 +1,3 @@
+Saat mencoba os.listdir, saya baru paham bahwa fungsi ini mengembalikan nama semua entri di dalam folder.
+Karena itu, saya perlu memfilter sendiri hanya yang berakhiran .txt.
+Latihan kecil ini membantu saya lebih nyaman bekerja dengan sistem file.

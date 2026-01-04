@@ -1,0 +1,1 @@
+Pengguna bereksperimen membuat nama file dinamis seperti "catatan-1.txt" menggunakan f-string di Python, yang terbukti lebih sederhana daripada penggabungan string dengan operator plus berulang.

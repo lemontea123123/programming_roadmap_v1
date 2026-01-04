@@ -1,0 +1,1 @@
+Pengguna mulai membangun kebiasaan menulis **docstring** untuk setiap fungsi, sehingga penjelasan fungsi terlihat saat hover di editor, membuat proyek latihan terasa lebih profesional.

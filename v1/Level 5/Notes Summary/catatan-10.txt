@@ -1,0 +1,3 @@
+**Ringkasan Teks:**
+
+Script akan membuat folder notes berisi beberapa file teks, membaca semua file tersebut, mengirimnya ke API untuk diringkas, dan menyimpan hasil ringkasan di folder terpisah.

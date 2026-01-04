@@ -1,0 +1,1 @@
+Integrasi API AI awalnya menakutkan, tapi jadi mudah jika dipecah: pertama pelajari HTTP request pakai library requests di Python, lalu kirim teks ke AI dan proses respons ringkasannya.

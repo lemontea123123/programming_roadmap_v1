@@ -1,0 +1,1 @@
+Pengguna mencoba menulis fungsi Python untuk membaca file sebagai string, awalnya lupa menutup file, tapi setelah pakai **keyword `with`**, kode jadi rapi dan aman, sehingga lebih paham pentingnya **context manager**.

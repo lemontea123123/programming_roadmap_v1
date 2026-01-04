@@ -1,0 +1,3 @@
+Saat debugging, saya mulai terbiasa menambahkan print sederhana untuk melihat nilai variabel penting.
+Misalnya, saya cek file_path, isi konten, dan status apakah file kosong atau tidak.
+Dengan cara ini, mencari sumber bug jadi lebih terarah dan tidak sekadar menebak-nebak.

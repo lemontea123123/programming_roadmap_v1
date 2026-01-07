@@ -74,7 +74,6 @@ def reverse_string_version_2(string_param):
     sample_list = list(string_param)
 
     reverse_version_3(sample_list)
-
     return "".join(sample_list)
 
 result_value = reverse_string_version_2(sample_string)

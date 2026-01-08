@@ -1,0 +1,93 @@
+"""
+Docstring for Exercise 1.2
+o	Buat dict stok_barang (nama barang → jumlah), lalu tulis program untuk:
+	Menambah barang baru.
+	Mengupdate jumlah barang.
+	Menampilkan semua barang dan jumlahnya dengan format rapi.
+"""
+
+def waiting_user():
+    print("Press Any Key To Continue...")
+    input()
+
+def input_nomor(dialog="Pilih No. Pilihan Yang Benar" , choice_list=[]):
+    type(choice_list)
+    loop=True 
+    print(dialog)
+
+    while loop:
+        try:
+            user_input = int(input())
+        except ValueError:
+            print("Tolong Input Format Nomor Yang Benar")
+            loop=True
+            continue
+        
+        #check jika pilihan nomor input hrus sesuai kriteria choice_list , jika kosong maka bebas
+        flag = len(choice_list)==0 or user_input in choice_list
+        if flag == False:
+            print("Tolong Input Nomor Sesuai Pilihan Yang Tersedia")
+            loop=True
+            continue
+
+        if flag== True:
+            loop=False
+
+    return user_input
+
+
+
+stok_barang = {
+    "tissue":10,
+    "odol":5,
+    "manisan":10
+}
+
+
+
+#Main program Loop
+loop = True
+while loop:
+    print("\nPilihan Menu:")
+    print("1. Tambah Barang Baru")
+    print("2. Update Jumlah Barang")
+    print("3. Tampilkan Semua Barang")
+    user_input = input_nomor("",[1,2,3])
+
+    if user_input ==1:
+        print("\nInput Nama Barang:")
+        nama_barang = input()
+        kuantitas = input_nomor(dialog="Input Jumlah Kuantitas")
+        stok_barang[nama_barang] = kuantitas
+
+    if user_input ==2:
+        pilihan = list(stok_barang.items())
+        pilihan_indexed = list(enumerate(pilihan,1))
+
+        print("\nInput Nomor Barang Untuk Ubah Kuantitas:")
+        for entri in pilihan_indexed:
+            nomor_entri = entri[0]
+            nama_produk = entri[1][0]
+            kuantitas_produk = entri[1][1]
+            print(nomor_entri,".",kuantitas_produk,"x",nama_produk)
+
+        
+        #Pastikan Input sesuai dengan pilihan pilihan barang yang tersedia
+        nomor_pilihan = input_nomor(choice_list=list(range(1,len(pilihan_indexed)+1)))
+        jumlah = input_nomor("Input Jumlah Kuantitas Baru")
+
+        #Cari barang di dictionary dan ubah jumlah nya
+        produk_pilihan = pilihan[nomor_pilihan - 1][0]
+        stok_barang[produk_pilihan] = jumlah
+
+
+
+    if user_input == 3:
+        print("\nInventory Sekarang:")
+        for nama_barang , kuantitas in stok_barang.items():
+            print(kuantitas ,"x",nama_barang)
+        waiting_user()
+
+
+
+print("test")

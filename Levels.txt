@@ -1,0 +1,7 @@
+LEVEL 1 – Dasar Pemrograman (Python)
+LEVEL 2 – Algoritma & Struktur Data Ringan
+LEVEL 3 – Data & SQL Dasar
+LEVEL 4 – Web Dasar & API
+LEVEL 5 – Integrasi AI Praktis
+LEVEL 6 – Penguatan Algoritma (Siap LeetCode Easy)
+LEVEL 7 – LeetCode Beneran (Easy Fokus)

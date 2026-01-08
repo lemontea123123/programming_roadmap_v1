@@ -1,0 +1,3 @@
+Saya mulai membangun kebiasaan menulis docstring untuk setiap fungsi yang saya buat.
+Dengan docstring, saya bisa melihat penjelasan fungsi hanya dengan hover di editor.
+Ini membuat project terasa lebih profesional walaupun masih skala latihan.

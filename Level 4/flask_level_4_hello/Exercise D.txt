@@ -1,0 +1,25 @@
+D . Mini project utama: Notes app sederhana (wajib)
+10.	Struktur data & penyimpanan lokal
+•	Di app.py, buat list global notes = [] yang berisi dict catatan (id, title, content).geeksforgeeks+1
+•	Tambahkan fungsi kecil untuk generate id (misal increment integer).
+
+Sudh Diimplementasi di app_test_1.py
+
+11.	Fitur tambah catatan (HTML form)
+•	Di halaman utama (/), tampilkan:
+o	Form tambah catatan (judul + isi).python-engineer
+o	Daftar catatan yang sudah ada (loop di template).
+•	Route POST /add untuk ambil data form dan append ke list notes, lalu redirect ke /.
+
+Sudh Diimplementasi di app_test_1.py
+
+12.	Fitur hapus catatan
+•	Di sebelah setiap catatan, tampilkan link/tombol “Hapus” yang mengarah ke /delete/<id>.geeksforgeeks+1
+•	Route /delete/<id> menghapus catatan dari list lalu redirect ke /.
+13.	Versi API JSON untuk notes
+
+Sudh Diimplementasi di app_test_1.py
+
+•	GET /api/notes: kirim semua notes dalam bentuk JSON.notes.kodekloud
+•	DELETE /api/notes/<id>: hapus catatan berdasarkan id dan balas JSON {"status": "deleted"}.
+Sudh Diimplementasi di app_test_1.py

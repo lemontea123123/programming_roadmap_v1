@@ -1,0 +1,1 @@
+Saat debugging, penulis terbiasa menambahkan **print sederhana** untuk memeriksa nilai variabel penting seperti **file_path**, isi konten, dan status file kosong atau tidak, sehingga pencarian bug lebih terarah tanpa menebak-nebak.

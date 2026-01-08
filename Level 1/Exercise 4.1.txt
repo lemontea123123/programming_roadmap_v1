@@ -1,0 +1,13 @@
+#List nama: simpan 5 nama dalam list, lalu print satu per satu.
+nama_list = []
+nama_list_length = len(nama_list)
+
+while nama_list_length <5:
+    print("Please input a name: ")
+    user_input = input()
+    nama_list.append(user_input)
+    nama_list_length = len(nama_list)
+
+print("\n\nList of names: ")
+for name in nama_list:
+    print(name)

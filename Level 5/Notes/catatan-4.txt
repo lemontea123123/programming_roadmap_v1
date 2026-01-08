@@ -1,0 +1,3 @@
+Integrasi dengan API AI awalnya terasa menakutkan, tetapi ketika dipecah menjadi langkah-langkah kecil, ternyata jauh lebih masuk akal.
+Pertama saya perlu paham cara membuat HTTP request dengan library requests di Python.
+Setelah itu baru belajar bagaimana mengirim teks ke layanan AI dan memproses respons ringkasan yang dikembalikan.

@@ -1,0 +1,7 @@
+print("Berapa umur kamu sekarang?")
+input1 = int(input())
+
+result = input1 + 5
+
+print("Umur kamu dalam 5 tahun akan menjadi:")
+print(result)

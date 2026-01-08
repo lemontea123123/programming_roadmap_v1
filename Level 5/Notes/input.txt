@@ -1,0 +1,5 @@
+Hari ini saya mulai latihan membuat script Python untuk membaca dan menulis file teks.
+Tujuannya adalah membuat program yang bisa membaca isi sebuah file, lalu mengirimnya ke layanan AI untuk diringkas.
+Dengan cara ini, saya bisa menghemat waktu ketika harus membaca catatan yang panjang.
+Latihan ini juga membantu saya memahami cara kerja file I/O, seperti membuka file, membaca konten, dan menyimpan hasil ke file baru.
+Nantinya, kemampuan ini bisa dikembangkan untuk project yang lebih besar, misalnya merangkum banyak catatan sekaligus dalam satu folder.

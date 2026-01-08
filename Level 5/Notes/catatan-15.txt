@@ -1,0 +1,3 @@
+Hari ini saya menuliskan rencana belajar minggu depan di dalam beberapa file catatan.
+Tiap file berisi fokus latihan, seperti file I/O, error handling, atau penggunaan API.
+Rencananya, semua catatan ini akan saya rangkum otomatis menggunakan script yang sedang saya kembangkan.

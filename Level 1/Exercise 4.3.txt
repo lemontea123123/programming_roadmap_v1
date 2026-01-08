@@ -1,0 +1,10 @@
+#Dict mahasiswa: simpan nama, umur, jurusan, lalu print dengan format rapi.
+
+print("Tolong input nama anda: ")
+nama = input()
+print("Tolong input umur anda: ")
+umur = input()
+print("Tolong input jurusan anda: ")
+jurusan = input()
+
+print("\n\nNama Anda ", nama , " sekarang berusia ",umur," tahun.\nLulusan jurusan ",jurusan,".")

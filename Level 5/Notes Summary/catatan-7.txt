@@ -1,0 +1,1 @@
+Penulis menyadari bahwa **penamaan variabel yang deskriptif** (seperti `content`, `file_path`, `notes_dir`) jauh lebih membantu dalam memahami kode dibanding nama singkat (`a`, `b`, `c`). Ke depan, mereka ingin terbiasa menulis kode yang tidak hanya berfungsi, tetapi juga mudah dibaca.

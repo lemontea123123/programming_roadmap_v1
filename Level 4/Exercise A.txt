@@ -1,0 +1,6 @@
+
+Exercise A.2.
+Telah Buat File form.html dan save di file form test
+
+Exercise A.3.
+Lanjut dengan python

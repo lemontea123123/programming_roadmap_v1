@@ -1,0 +1,3 @@
+Project to do list di terminal sudah hampir selesai dan mulai terasa manfaatnya.
+Saya bisa menambah, melihat, dan menghapus tugas langsung dari command line tanpa perlu aplikasi lain.
+Langkah berikutnya adalah merapikan kode dengan memecahnya menjadi beberapa fungsi agar lebih mudah dibaca dan dirawat.

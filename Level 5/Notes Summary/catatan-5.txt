@@ -1,0 +1,1 @@
+Besok rencana latihan file I/O dan selesaikan script ringkas_file.py: baca input.txt, cek kosong, ringkas via API, simpan ke summary.txt.[3]

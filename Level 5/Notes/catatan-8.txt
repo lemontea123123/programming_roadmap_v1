@@ -1,0 +1,3 @@
+Hari ini saya latihan membuat pengecekan error sederhana menggunakan raise.
+Saya membuat kondisi yang akan melempar ValueError ketika konten file kosong.
+Dengan begitu, program berhenti dengan pesan yang jelas daripada diam-diam menghasilkan output aneh.

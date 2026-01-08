@@ -1,0 +1,1 @@
+Pengguna belajar membaca dan menulis file teks di Python menggunakan `open()`, membaca/tulis isi, lalu tutup file; ini memungkinkan program menyimpan catatan dan hasil latihan.[1][2]

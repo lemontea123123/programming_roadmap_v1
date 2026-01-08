@@ -1,0 +1,32 @@
+"""
+Docstring for v1.Level 3.Exercise C.2
+2. Mini Project – Query Explorer Sederhana (SQL + Python opsional)
+Versi SQL saja:
+•	Punya database SQLite dengan tabel penjualan dan produk.wikipedia
+•	Siapkan beberapa query yang bisa kamu jalankan ulang:
+o	Lihat 10 transaksi terbaru.
+o	Lihat total penjualan per kategori.
+o	Lihat produk dengan penjualan terbanyak.wikipedia
+"""
+
+
+TEST
+ SELECT * , sum(jumlah) FROM penjualan ORDER BY tanggal DESC , id DESC ;
+
+ //Sales Urutan Tanggal Menurun
+ SELECT penjualan.tanggal , stok.produk , penjualan.jumlah , stok.harga , (penjualan.jumlah * stok.harga) AS total_penjualan
+    FROM penjualan INNER JOIN stok ON penjualan.produk_id = stok.id
+        ORDER BY tanggal DESC , penjualan.id DESC LIMIT 10;
+
+//Sales Per Kategori
+ SELECT stok.kategori , sum(penjualan.jumlah) , sum(penjualan.jumlah * stok.harga) AS total_penjualan
+    FROM penjualan INNER JOIN stok ON penjualan.produk_id = stok.id
+        GROUP BY stok.kategori 
+            ORDER BY total_penjualan DESC ;
+
+//Produk Paling Laku
+ SELECT stok.produk , sum(penjualan.jumlah) , sum(penjualan.jumlah * stok.harga) AS total_penjualan
+    FROM penjualan INNER JOIN stok ON penjualan.produk_id = stok.id
+        GROUP BY stok.produk 
+            ORDER BY total_penjualan DESC 
+                LIMIT 1;

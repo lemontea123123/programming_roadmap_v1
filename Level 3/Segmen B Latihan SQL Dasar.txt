@@ -1,0 +1,139 @@
+Gunakan SQLite atau playground online.
+1.	Setup tabel sederhana
+•	Buat tabel penjualan dengan kolom: id, tanggal, produk, jumlah, harga.wikipedia
+•	Insert minimal 10–20 baris data contoh.wikipedia
+
+B.1.
+
+CREATE TABLE penjualan(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tanggal DATETIME,
+    produk_id INTEGER,
+    jumlah INTEGER
+);
+
+CREATE TABLE stok(
+    id INTEGER PRIMARY KEY,
+    produk TEXT,
+    harga INT,
+    kategori TEXT
+);
+
+INI YANG LAMA
+INSERT INTO penjualan(tanggal , produk , jumlah , harga)
+    VALUES
+        ('2025-01-01', 'Teh Botol',      10, 5000),
+        ('2025-01-01', 'Kopi Hitam',      8, 8000),
+        ('2025-01-01', 'Roti Coklat',     6, 6000),
+        ('2025-01-02', 'Mie Instan',     15, 3500),
+        ('2025-01-02', 'Susu UHT',        5, 12000),
+        ('2025-01-02', 'Air Mineral',    20, 3000),
+        ('2025-01-03', 'Snack Kentang',   7, 9000),
+        ('2025-01-03', 'Coklat Batang',   9, 7000),
+        ('2025-01-03', 'Sabun Mandi',     4, 8000),
+        ('2025-01-04', 'Odol',            5, 6000),
+        ('2025-01-04', 'Teh Botol',      12, 5000),
+        ('2025-01-04', 'Kopi Hitam',      9, 8000),
+        ('2025-01-05', 'Roti Coklat',     7, 6000),
+        ('2025-01-05', 'Mie Instan',     18, 3500),
+        ('2025-01-05', 'Susu UHT',        6, 12000),
+        ('2025-01-06', 'Air Mineral',    22, 3000),
+        ('2025-01-06', 'Snack Kentang',   8, 9000),
+        ('2025-01-06', 'Coklat Batang',  10, 7000),
+        ('2025-01-07', 'Sabun Mandi',     5, 8000),
+        ('2025-01-07', 'Odol',            6, 6000);
+
+INI YANG BARU
+INSERT INTO penjualan(tanggal , produk_ID , jumlah )
+    VALUES
+        ('2025-01-01', 1 ,      10),
+        ('2025-01-01', 2 ,      8),
+        ('2025-01-01', 3 ,     6),
+        ('2025-01-02', 4 ,     15),
+        ('2025-01-02', 5 ,        5),
+        ('2025-01-02', 6 ,    20),
+        ('2025-01-03', 7 ,   7),
+        ('2025-01-03', 8 ,   9),
+        ('2025-01-03', 9 ,     4),
+        ('2025-01-04', 10 ,            5),
+        ('2025-01-04', 1,      12),
+        ('2025-01-04', 2,      9),
+        ('2025-01-05', 3,     7),
+        ('2025-01-05', 4,     18),
+        ('2025-01-05', 5,        6),
+        ('2025-01-06', 6,    22),
+        ('2025-01-06', 7,   8),
+        ('2025-01-06', 8,  10),
+        ('2025-01-07', 9,     5),
+        ('2025-01-07', 10,            6);
+
+INSERT INTO stok(id , produk , harga, kategori)
+    VALUES
+        (1,'Teh Botol',5000,'Minuman'),
+        (2,'Kopi Hitam',8000,'Minuman'),
+        (3,'Roti Coklat',6000,'Roti'),
+        (4,'Mie Instan',3500,'Makanan'),
+        (5,'Susu UHT',12000,'Minuman'),
+        (6,'Air Mineral',3000,'Minuman'),
+        (7,'Snack Kentang',9000,'Makanan'),
+        (8,'Coklat Batang',7000,'Makanan'),
+        (9,'Sabun Mandi',8000,'Toilet'),
+        (10,'Odol',6000,'Toilet');
+
+
+
+B.2.
+2.	SELECT & WHERE
+•	Query untuk menampilkan semua baris.wikipedia
+•	Query untuk menampilkan hanya penjualan untuk satu produk tertentu dan hanya tanggal setelah tanggal tertentu.wikipedia
+
+SELECT * FROM penjualan;
+SELECT * FROM penjualan WHERE produk='Roti Coklat' AND tanggal > '2025-01-01' ;
+
+
+B.3.
+3.	ORDER BY & LIMIT
+•	Query untuk menampilkan 5 penjualan dengan total tertinggi (boleh pakai jumlah * harga langsung di query).wikipedia
+•	Query untuk menampilkan penjualan diurutkan berdasarkan tanggal terbaru dulu.wikipedia
+
+SELECT * , jumlah*harga AS total_penjualan FROM penjualan ORDER BY total_penjualan DESC LIMIT 5 ;
+SELECT * FROM penjualan ORDER BY tanggal DESC;
+
+B.4.
+4.	Fungsi agregasi
+•	Hitung total semua penjualan.wikipedia
+•	Hitung rata-rata, maksimum, dan minimum jumlah.wikipedia
+
+SELECT SUM(harga*jumlah) FROM penjualan;
+SELECT AVG(jumlah) FROM penjualan;
+SELECT MAX(jumlah) FROM penjualan;
+SELECT MIN(jumlah) FROM penjualan;
+
+B.5.
+5.	GROUP BY
+•	Hitung total penjualan per produk (satu baris per produk).wikipedia
+•	Hitung total penjualan per hari atau per bulan (misal pakai fungsi tanggal kalau tersedia).wikipedia
+
+SELECT produk , SUM(jumlah*harga) AS total_penjualan FROM penjualan GROUP BY produk;
+SELECT tanggal , SUM(jumlah*harga) AS total_penjualan FROM penjualan GROUP BY tanggal;
+
+B.6.
+6.	JOIN sederhana
+•	Buat tabel kedua produk dengan kolom kode_produk, nama_produk, kategori.wikipedia
+•	Latihan JOIN:
+o	Ambil daftar transaksi beserta nama produk dan kategori.
+o	Hitung total penjualan per kategori.wikipedia
+
+ALTER TABLE penjualan DROP COLUMN harga;
+
+SELECT penjualan.tanggal , stok.produk , penjualan.jumlah , stok.harga , (penjualan.jumlah*stok.harga) AS total_penjualan
+    FROM penjualan INNER JOIN stok ON penjualan.produk_id = stok.id;
+
+SELECT stok.kategori , SUM(penjualan.jumlah * stok.harga) AS total_penjualan
+    FROM penjualan INNER JOIN stok ON penjualan.produk_id = stok.id
+        GROUP BY stok.kategori;
+
+
+
+
+

@@ -1,0 +1,20 @@
+"""
+Docstring for v1.Level 2.Exercise 6.1
+o	Program yang menghitung frekuensi setiap huruf dalam string (abaikan spasi).
+
+"""
+
+sample1 = "Belajar Python itu Seru Sekali"
+sample1 = "".join(sample1.split()).lower()
+dict_test = {}
+
+
+for char in sample1:
+    try:
+        dict_test[char] = dict_test[char] + 1
+    except KeyError:
+        dict_test[char] = 1
+
+
+    
+

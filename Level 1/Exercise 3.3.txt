@@ -1,0 +1,17 @@
+#Program yang terus minta input angka sampai user ketik 0, lalu print totalnya.
+i = 0
+user_input = -1
+
+while True :
+    print("Please input a number: ")
+    user_input = float(input())
+    i = i + user_input
+    if user_input == 0:
+        break
+
+
+print("\nTotal Sum : ", i )
+
+
+
+

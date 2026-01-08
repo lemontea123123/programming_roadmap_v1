@@ -1,0 +1,42 @@
+"""
+Docstring for Exercise 6.2
+7.	Project 2 – Game tebak angka
+•	 Program pilih angka rahasia 1–10 (boleh statis dulu).
+•	 User punya max 3 kesempatan menebak.
+•	 Beri pesan benar/salah, dan akhiri game dengan pesan yang jelas.
+"""
+
+angka_rahasia = 9
+chances = 3
+repeat = True
+
+# Flag menang kalah
+hasil = 0
+
+print("Ayo coba tebak angka rahasa 1-10 :")
+while repeat:
+    print("Mari Tebak!:")
+    input_user = int(input())
+
+    if input_user < 1 or input_user > 10:
+        print("Tolong berikan angka yang di dalam range 1 - 10")
+        continue
+    
+    if input_user == angka_rahasia:
+        print("Betul !\n")
+        hasil = 1
+        repeat = False
+    
+    if input_user != angka_rahasia:
+        print("Salah !\n")
+        repeat = True
+        chances = chances - 1
+    
+    if chances < 1:
+        repeat = False
+
+print()
+if hasil == 1:
+    print("Anda Menang!")
+else:
+    print("Anda Kalah!")

@@ -1,0 +1,3 @@
+Besok saya berencana fokus latihan file I/O dan menyelesaikan script ringkas_file.py.
+Script ini akan membaca isi input.txt, mengecek apakah file kosong, lalu mengirim teks ke API untuk diringkas secara otomatis.
+Hasil ringkasan kemudian akan disimpan ke summary.txt sehingga saya bisa membaca versi singkat catatan kapan saja.

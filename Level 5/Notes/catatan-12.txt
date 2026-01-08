@@ -1,0 +1,3 @@
+Hari ini saya eksperimen membuat nama file dinamis menggunakan f-string.
+Saya membuat pola seperti catatan-1.txt, catatan-2.txt, dan seterusnya.
+Ternyata cara ini jauh lebih simpel dibanding menggabungkan string dengan plus berkali-kali.

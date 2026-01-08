@@ -1,0 +1,1 @@
+Pengguna hari ini berlatih menggunakan `raise` untuk melempar **ValueError** jika konten file kosong, agar program berhenti dengan pesan error jelas daripada output aneh.[1][4]

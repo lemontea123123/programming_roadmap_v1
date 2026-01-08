@@ -5,3 +5,11 @@ LEVEL 4 – Web Dasar & API
 LEVEL 5 – Integrasi AI Praktis
 LEVEL 6 – Penguatan Algoritma (Siap LeetCode Easy)
 LEVEL 7 – LeetCode Beneran (Easy Fokus)
+
+LEVEL 1 – Basic Programming (Python)
+LEVEL 2 – Basic Algorithms & Data Structures
+LEVEL 3 – Basic Data & SQL
+LEVEL 4 – Basic Web & API
+LEVEL 5 – Practical AI Integration
+LEVEL 6 – Algorithm Strengthening (Ready for LeetCode Easy)
+LEVEL 7 – Real LeetCode (Easy Focus)

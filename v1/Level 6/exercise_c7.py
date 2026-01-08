@@ -245,13 +245,71 @@ def gabung_list_main(list_param_1):
     else:
         first_split_sorted = gabung_list_main(first_split)
         second_split_sorted = gabung_list_main(second_split)
-
         return gabung_list_one(first_split_sorted,second_split_sorted)
+
+
+def gabung_list_main_v2(list_param_1):
+    #size of subarrays
+    size = 1
+    loop = True
+    length = len(list_param_1)
+
+    #Initialize new_list with list_param_1 first then will receive incremental changes
+    new_list = list_param_1
+    new_list_2 = []
     
 
+    while( size <=length ):
+        #Initialize the left right array parameters with variable sizes
+        left_start = 0
+        left_end = left_start+size
+        right_start = left_end
+        right_end = right_start + size
+
+        #print("Size Length Reassign")
+
+        while(left_start < length):
+            """
+            print("left_start = ",left_start)
+            print("left_end = ",left_end)
+            print("right_start = ",right_start)
+            print("right_end = ",right_end)
+            print("\n")
+            """
+
+            #Di asumsi tiap split sudah sorted , jadi makany harus mulai dari size = 1
+            left_split = new_list[left_start:left_end]
+            right_split = new_list[right_start:right_end]
+
+            sub_sorted = gabung_list_one(left_split,right_split)
+
+            #List buat nampung hasil sorting subarrays
+            new_list_2.extend(sub_sorted)
+            
+            #Reassign
+            left_start = right_end
+            left_end = left_start+size
+            right_start = left_end
+            right_end = right_start + size
+        
+        #new_list direassign untuk nampung nilai lengkap new_list_2
+        new_list = new_list_2
+        new_list_2=[]
+        size *= 2
+
+    
+    return new_list
+        
 
 
-print(gabung_list_main([64, 34, 25, 12, 22, 11, 90]))
+
+test_array = list(range(10,0,-1))
+test_array_2 = [12, 7, -5, 0, 23, 9, 9, 4, -2, 30]
+print(gabung_list_main_v2(test_array_2))
+
+#print(test_array[111:])
+#print(test_array)
+#print(gabung_list_main([64, 34, 25, 12, 22, 11, 90]))
 
 
 

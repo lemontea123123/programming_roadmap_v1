@@ -1,0 +1,5 @@
+LEVEL 1 – Basic Programming (Python)
+
+Level ini saya gunakan untuk membangun dasar pemrograman dengan Python. Di sini saya berlatih variabel, tipe data, operator, if/else, loop, fungsi, list, dictionary, input/output, dan penanganan error sederhana melalui skrip kecil seperti kalkulator rata‑rata, game tebak angka, dan to‑do list di terminal. Tujuan saya di level ini adalah bisa menulis program sederhana tanpa terus menerus menyalin dari contoh.
+
+In this level I focus on core programming fundamentals using Python. I practice variables, data types, operators, conditionals, loops, functions, lists, dictionaries, input/output, and basic error handling by building small scripts such as average calculators, number‑guessing games, and terminal to‑do lists. The goal of this level is to become comfortable writing simple programs without constantly copying from examples.

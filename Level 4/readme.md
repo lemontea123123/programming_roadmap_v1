@@ -1,0 +1,8 @@
+LEVEL 4 – Web & API Dasar
+
+ID:
+Di Level 4 ini saya belajar konsep dasar web dan HTTP sambil membangun aplikasi catatan sederhana dengan Flask. Saya berlatih memahami cara kerja request/response, HTML form, dan JSON, lalu membuat route Flask untuk menampilkan halaman, menerima data form (GET/POST), dan mengirim/ membaca JSON lewat endpoint API sederhana. Dari latihan ini saya membangun notes app kecil: menambah dan menghapus catatan yang disimpan di list Python, menampilkan daftar catatan di halaman HTML, serta menyediakan versi API JSON (GET semua catatan, DELETE per id). Tujuan saya di level ini adalah paham alur penuh web sederhana: dari browser mengirim request, diproses di Flask, sampai kembali lagi sebagai HTML atau JSON yang bisa dites dengan browser maupun Postman.
+​
+
+EN:
+In Level 4 I learn core web and HTTP concepts while building a simple notes application using Flask. I practice understanding how requests and responses work, how HTML forms and JSON are structured, and then create Flask routes to render pages, handle form data (GET/POST), and send/receive JSON through basic API endpoints. From these exercises I build a small notes app: adding and deleting notes stored in a Python list, displaying them in an HTML template, and exposing a JSON API (GET all notes, DELETE by id). The goal of this level is to understand the full flow of a simple web app: from the browser sending a request, being processed by Flask, and returning either HTML or JSON that can be tested via a browser or tools like Postman.
